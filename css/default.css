@@ -6,8 +6,8 @@ html, body, #viewer {
 }
 
 .custom-tooltip {
-    max-width: none;
-    width: 300px;
+    max-width: 250px;
+    width: 200px;
     padding: 0;
     box-shadow: 0 0 0 3px white;
 }

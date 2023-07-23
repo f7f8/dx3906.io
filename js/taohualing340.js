@@ -3,18 +3,17 @@ const viewer = new PhotoSphereViewer.Viewer({
   container: document.querySelector('#viewer'),
   panorama: baseUrl + 'panorama/taohualing-340m-20230721.jpg',
   caption: '桃花岭山脊步道 . 340米（2023/07/21）',
-  touchmoveTwoFingers: true,
-  navbar: ['zoom', 'caption', 'fullscreen'],
+  navbar: ['zoom', 'caption', 'markers', 'markersList', 'fullscreen'],
   plugins: [
     [PhotoSphereViewer.MarkersPlugin, {
       markers: [
         {
-          id: 'cstip-xiyaxiaoxue',
+          id: 'cstip-taohualing',
           tooltip: {
             content: document.querySelector('#cstip-taohualing-content').innerHTML,
             className: 'custom-tooltip',
             position: 'top',
-            trigger: 'hover',
+            trigger: 'click',
           },
           position: { pitch: -0.5, yaw: -0.15 },
           image: baseUrl + 'images/pictos/pin-blue.png',
@@ -32,7 +31,7 @@ const markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
 viewer.addEventListener('ready', () => {
   viewer
     .animate({
-      yaw: 0,
+      yaw: -0.15,
       pitch: -0.3,
       speed: 1000,
     })
