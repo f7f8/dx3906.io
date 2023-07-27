@@ -9,14 +9,11 @@ const showPSV = function(viewerElement, gallery){
 
   for(let i=0; i< scenes.length; i++) {
     const s = $(scenes[i]);
-    console.log(s.data("caption"));
-    console.log(s.data("image"));
-
     const gi = {
       id: 'scene' + i,
       name: s.data("caption"),
       panorama: s.data("image"),
-      thumbnail: s.data("image")
+      thumbnail: s.data("thumb")
     };
 
     ga.items.push(gi);
@@ -46,15 +43,15 @@ const showPSV = function(viewerElement, gallery){
   });
 
   //const markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
-  //viewer.addEventListener('ready', () => {
-  //  viewer
-  //    .animate({
-  //      yaw: -0.15,
-  //      pitch: -0.3,
-  //      speed: 1000,
-  //    })
-  //    .then(() => {
-  //      //markersPlugin.showMarkerTooltip('custom-tooltip');
-  //    });
-  //}, { once: true });
+  viewer.addEventListener('ready', () => {
+    viewer
+      .animate({
+        yaw: 0,
+        pitch: -0.2,
+        speed: 1000,
+      })
+      .then(() => {
+        //markersPlugin.showMarkerTooltip('custom-tooltip');
+      });
+  }, { once: true });
 }

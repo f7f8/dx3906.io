@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全景星球</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="全景星球">
+    <meta property="og:description" content="大师兄的全景照片合集">
+    <meta property="og:image" content="https://dx3906.io/vi/logo-256.png">
+    <meta property="og:url" content="https://dx3906.io/">
+    <link rel="stylesheet" href="css/photo-sphere-viewer/core.min.css?v=1" />
+    <link rel="stylesheet" href="css/photo-sphere-viewer/markers-plugin.min.css?v=1" />
+    <link rel="stylesheet" href="css/photo-sphere-viewer/gallery-plugin.min.css?v=1" />
+    <link rel="stylesheet" href="css/default.css" />
+  </head>
+  <body>
+    <script src="js/jquery/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/three/three.min.js?v=1"></script>
+    <script src="js/photo-sphere-viewer/core.min.js?v=1"></script>
+    <script src="js/photo-sphere-viewer/markers-plugin.min.js?v=1"></script>
+    <script src="js/photo-sphere-viewer/gallery-plugin.min.js?v=1"></script>
+    <script src="js/psv.js"></script>
+    <div id="viewer"></div>
+    <gallery id="gallery">
+    <scene data-caption="象鼻窝西.500米.7/27" data-image="assets/panorama/20230727-xiangbiwo-west-500m-1.jpg" data-thumb="assets/panorama/20230727-xiangbiwo-west-500m-1.thumb.jpg"></scene>
+    <scene data-caption="象鼻窝西(净水厂).500米.7/27" data-image="assets/panorama/20230727-xiangbiwo-west-500m-2.jpg" data-thumb="assets/panorama/20230727-xiangbiwo-west-500m-2.thumb.jpg"></scene>
+    <scene data-caption="象鼻窝.314米.7/26" data-image="assets/panorama/xiangbiwo-314m-20230726.jpg" data-thumb="assets/panorama/xiangbiwo-314m-20230726.thumb.jpg"></scene>
+    <scene data-caption="象鼻窝.500米.7.26" data-image="assets/panorama/xiangbiwo-500m-20230726.jpg" data-thumb="assets/panorama/xiangbiwo-500m-20230726.thumb.jpg"></scene>
+    </gallery>
+    <script>
+      showPSV($("#viewer")[0], $("#gallery")[0]);
+    </script>
+  </body>
+</html>
