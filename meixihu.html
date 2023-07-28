@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全景星球 - 梅溪湖</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="全景星球 - 梅溪湖">
+    <meta property="og:description" content="大师兄的全景照片合集 - 长沙梅溪湖附近，城市岛，金茂大厦，桃花岭">
+    <meta property="og:image" content="https://dx3906.io/vi/logo-256.png">
+    <meta property="og:url" content="https://dx3906.io/">
+    <link rel="stylesheet" href="css/photo-sphere-viewer/core.min.css?v=1" />
+    <link rel="stylesheet" href="css/photo-sphere-viewer/markers-plugin.min.css?v=1" />
+    <link rel="stylesheet" href="css/photo-sphere-viewer/gallery-plugin.min.css?v=1" />
+    <link rel="stylesheet" href="css/default.css" />
+  </head>
+  <body>
+    <script src="js/jquery/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/three/three.min.js?v=1"></script>
+    <script src="js/photo-sphere-viewer/core.min.js?v=1"></script>
+    <script src="js/photo-sphere-viewer/markers-plugin.min.js?v=1"></script>
+    <script src="js/photo-sphere-viewer/gallery-plugin.min.js?v=1"></script>
+    <script src="js/psv.js"></script>
+    <div id="viewer"></div>
+    <gallery id="gallery">
+    <scene data-caption="梅溪湖中央.300米" data-image="assets/panorama/meixihu-center-300m-20230721.jpg" data-thumb="assets/panorama/meixihu-center-300m-20230721.thumb.jpg">
+    </scene>
+    <scene data-caption="梅溪湖金茂大厦.270米" data-image="assets/panorama/meixihu-jinmao-300m-20230720.jpg" data-thumb="assets/panorama/meixihu-jinmao-300m-20230720.thumb.jpg">
+    </scene>
+    <scene data-caption="梅溪湖2期.500米" data-image="assets/panorama/meixihu2g-500m-20230726.jpg" data-thumb="assets/panorama/meixihu2g-500m-20230726.thumb.jpg">
+    </scene>
+    </gallery>
+    <script>
+      showPSV($("#viewer")[0], $("#gallery")[0]);
+    </script>
+  </body>
+</html>
